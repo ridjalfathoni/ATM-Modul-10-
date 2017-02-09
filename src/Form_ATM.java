@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -26,35 +29,72 @@ public class Form_ATM extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtPIN = new javax.swing.JTextField();
         bLanjut = new javax.swing.JButton();
         bBatal = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        txtPIN = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
-        getContentPane().add(txtPIN);
-        txtPIN.setBounds(40, 80, 317, 28);
 
         bLanjut.setText("Lanjutkan");
+        bLanjut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bLanjutActionPerformed(evt);
+            }
+        });
         getContentPane().add(bLanjut);
-        bLanjut.setBounds(260, 120, 125, 33);
+        bLanjut.setBounds(260, 90, 125, 33);
 
         bBatal.setText("Batal");
+        bBatal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBatalActionPerformed(evt);
+            }
+        });
         getContentPane().add(bBatal);
-        bBatal.setBounds(10, 120, 125, 33);
+        bBatal.setBounds(10, 90, 125, 33);
 
         jLabel1.setText("MASUKKAN 4 DIGIT PIN ANDA");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(120, 40, 160, 32);
+        jLabel1.setBounds(120, 20, 220, 32);
 
         jLabel2.setText("ATM BNI SYARIAH");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(150, 0, 90, 38);
+        jLabel2.setBounds(150, 0, 140, 38);
 
-        pack();
+        txtPIN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(txtPIN);
+        txtPIN.setBounds(10, 50, 370, 30);
+
+        setSize(new java.awt.Dimension(415, 171));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bLanjutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLanjutActionPerformed
+        // TODO add your handling code here:
+        int Pin;
+       int pin=1234;
+       
+       Pin = Integer.parseInt(txtPIN.getText().toString());
+       if (Pin == pin)
+       {
+           Transaksi a = new Transaksi();
+           a.setVisible(true);
+           dispose();
+       }
+       else if ( Pin != pin)
+       {
+           JOptionPane.showMessageDialog(null, "Masukkan PIN dengan benar!");
+       }
+       
+    }//GEN-LAST:event_bLanjutActionPerformed
+
+    private void bBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBatalActionPerformed
+        // TODO add your handling code here:
+         System.exit(ABORT);
+    }//GEN-LAST:event_bBatalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,6 +136,6 @@ public class Form_ATM extends javax.swing.JFrame {
     private javax.swing.JButton bLanjut;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField txtPIN;
+    private javax.swing.JPasswordField txtPIN;
     // End of variables declaration//GEN-END:variables
 }
