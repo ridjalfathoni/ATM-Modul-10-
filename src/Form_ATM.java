@@ -56,13 +56,15 @@ public class Form_ATM extends javax.swing.JFrame {
         getContentPane().add(bBatal);
         bBatal.setBounds(10, 90, 125, 33);
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("MASUKKAN 4 DIGIT PIN ANDA");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(120, 20, 220, 32);
+        jLabel1.setBounds(90, 20, 220, 32);
 
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("ATM BNI SYARIAH");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(150, 0, 140, 38);
+        jLabel2.setBounds(130, 0, 140, 38);
 
         txtPIN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(txtPIN);
