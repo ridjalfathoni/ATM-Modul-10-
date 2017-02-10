@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package TugasATM;
+package ATM;
 
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author riskiawp
+ * @author ridjalfathoni
  */
 public class setor {
      private int saldo;
